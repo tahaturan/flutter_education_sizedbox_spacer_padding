@@ -32,13 +32,17 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar( 
         title: Text(widget.title),
       ),
-      body: Column(
+      body: Row(
         children: [
-          Container(width: 80,height: 80,color: Colors.red,),
-          const Spacer(flex: 70,), //todo: var olan bosluklarin hepsinini bu arada kullanir istersek icine yuzdelik dilimde verebiliriz vermezsek tamamnini kullanir
-          Container(width: 50,height: 50,color: Colors.blue,),
-          const Spacer(flex: 30,),
-          Container(width: 100,height: 100,color: Colors.green,),
+          Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Container(width: 100 ,height: 100,color: Colors.red,),
+          ),
+          Container(width: 100,height: 100,color: Colors.blue,),
+          Padding(
+            padding: const EdgeInsets.only(left: 5,top: 5,bottom: 7,right: 10),
+            child: Container(width: 100,height: 100,color: Colors.green,),
+          ),
         ],
       ),
     );
