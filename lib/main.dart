@@ -33,16 +33,16 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Row(
+        //crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: Container(width: 100 ,height: 100,color: Colors.red,),
-          ),
-          Container(width: 100,height: 100,color: Colors.blue,),
-          Padding(
-            padding: const EdgeInsets.only(left: 5,top: 5,bottom: 7,right: 10),
-            child: Container(width: 100,height: 100,color: Colors.green,),
-          ),
+          Expanded(
+            flex: 60,
+            child: Container(width: 100,height: 100,color: Colors.red,)
+            ),
+          Expanded(
+            flex: 40,
+            child: Container(width: 100,height: 100,color: Colors.greenAccent,)
+            ),
         ],
       ),
     );
