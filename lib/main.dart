@@ -35,7 +35,12 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Row(
         children: [
           Container(width: 80,height: 80,color: Colors.red,),
-          Container(width: 50,height: 50,color: Colors.blue,),
+          SizedBox( //*normalde containerin boyutlandirmasi yapilabiliur fakat ornek olsun diye yaptik bazi wigget lari boyutlandirmak icin kullaniriz
+            width: 75,
+            height: 75,
+            child: Container(width: 50,height: 50,color: Colors.blue,)
+            ),
+            const SizedBox(width: 50,height: 50,), //todo: bu sekilde de bosluk oluturmak icinde kullanabiliriz
           Container(width: 100,height: 100,color: Colors.green,),
         ],
       ),
