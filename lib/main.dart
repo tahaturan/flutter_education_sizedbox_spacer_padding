@@ -32,15 +32,12 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar( 
         title: Text(widget.title),
       ),
-      body: Row(
+      body: Column(
         children: [
           Container(width: 80,height: 80,color: Colors.red,),
-          SizedBox( //*normalde containerin boyutlandirmasi yapilabiliur fakat ornek olsun diye yaptik bazi wigget lari boyutlandirmak icin kullaniriz
-            width: 75,
-            height: 75,
-            child: Container(width: 50,height: 50,color: Colors.blue,)
-            ),
-            const SizedBox(width: 50,height: 50,), //todo: bu sekilde de bosluk oluturmak icinde kullanabiliriz
+          const Spacer(flex: 70,), //todo: var olan bosluklarin hepsinini bu arada kullanir istersek icine yuzdelik dilimde verebiliriz vermezsek tamamnini kullanir
+          Container(width: 50,height: 50,color: Colors.blue,),
+          const Spacer(flex: 30,),
           Container(width: 100,height: 100,color: Colors.green,),
         ],
       ),
