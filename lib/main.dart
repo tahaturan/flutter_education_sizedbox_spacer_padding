@@ -46,6 +46,8 @@ class _MyHomePageState extends State<MyHomePage> {
               height: 20,
             ),
             Yazi('merhaba', 20.5),
+            SizedBox(height: 20,),
+            UzunYazi('deneme yazisi', 15),
           ],
         ),
       ),
@@ -86,6 +88,25 @@ class Yazi extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(icerik,style: TextStyle(fontSize: boyut),);
+    return Text(
+      icerik,
+      style: TextStyle(fontSize: boyut),
+    );
+  }
+}
+
+class UzunYazi extends StatelessWidget {
+  final String yazi;
+  final double boyut;
+  const UzunYazi(this.yazi, this.boyut, {Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      yazi,
+      style: TextStyle(
+        fontSize: boyut,
+        ),
+    );
   }
 }
