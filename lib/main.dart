@@ -36,18 +36,19 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            MaviKare(),
-            SizedBox(
+          children:  [
+            const MaviKare(),
+            const SizedBox(
               height: 20,
             ),
-            KirmiziKare(),
-            SizedBox(
+            const KirmiziKare(),
+            const SizedBox(
               height: 20,
             ),
-            Yazi('merhaba', 20.5),
-            SizedBox(height: 20,),
-            UzunYazi('deneme yazisi', 15),
+            const Yazi('merhaba', 20.5),
+            const SizedBox(height: 20,),
+            Image.asset("images/yemekresim.jpeg"),
+            const UzunYazi('patates kofte', 15),
           ],
         ),
       ),
